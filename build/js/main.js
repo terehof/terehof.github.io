@@ -1,0 +1,1 @@
+var myVar="mazda 323 bg",newVar=myVar+" IV 1.8";console.log(newVar);

@@ -1,0 +1,11 @@
+/*colors*/
+html {
+  background: #fff;
+}
+h1 {
+  color: #fff;
+  font-size: 30px;
+  margin-top: 500px;
+  transition: all 0.25s ease;
+}
+/*# sourceMappingURL=style.css.map */
