@@ -1,1 +1,1 @@
-var app=app||{};app.main={init:function(){this.events()},events:function(){console.log("test")}};var App=function(n,i){function t(){i.main.init()}return{init:t}}(jQuery,app);$(function(){App.init()});
+define(["jquery"],function(n){var t=t||{};return t.main={init:function(){this.test()},test:function(){console.log("test")}},t.init=function(){t.main.init()},t});

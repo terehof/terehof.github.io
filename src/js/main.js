@@ -1,20 +1,40 @@
-var app = app || {};
-app.main = {
-    init: function() {
-        this.events();
-    },
-    events: function () {
-        console.log('test');
-    }
-};
-var App = (function($, app){
-    function init () {
-        app.main.init();
-    }
-    return {
-        init: init
+define(['jquery'], function ($) {
+    var app = app || {};
+    app.main = {
+        init: function() {
+            this.test();
+        },
+        test: function () {
+            console.log('test');
+        }
     };
-})(jQuery, app);
-$(function () {
-    App.init();
+
+
+
+    app.init = function () {
+        app.main.init();
+    };
+
+
+
+    return app;
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//$(function () {
+//    App.init();
+//});

@@ -88,14 +88,14 @@ gulp.task('style-min', function () {
         .pipe(reload({ stream:true }));
 });
 gulp.task('js', function () {
-    return gulp.src(['bower_components/jquery/dist/jquery.min.js', path.src.js])
+    return gulp.src([path.src.js])
         .pipe(uglify())
         //.pipe(concat('main.js'))
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({ stream:true }));
 });
 gulp.task('js-min', function () {
-    return gulp.src(['bower_components/jquery/dist/jquery.min.js', path.src.js])
+    return gulp.src([path.src.js])
         .pipe(uglify())
         .pipe(concat('main.js'))
         .pipe(jsmin())
