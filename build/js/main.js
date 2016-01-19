@@ -1,1 +1,1 @@
-var myVar="mazda 323 bg",newVar=myVar+" IV 1.8";console.log(newVar);
+var app=app||{};app.main={init:function(){this.events()},events:function(){console.log("test")}};var App=function(n,i){function t(){i.main.init()}return{init:t}}(jQuery,app);$(function(){App.init()});
