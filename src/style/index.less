@@ -22,6 +22,16 @@ p {
 .main-wrapper {
     height: 100%;
 }
+.clear {
+    clear: both;
+}
+.clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
 .main-container {
     position: relative;
     max-width: 1024px;
@@ -45,7 +55,7 @@ p {
         width: 36%;
         height: 100%;
         overflow: auto;
-        padding: 2.5rem 4rem 2rem;
+        padding: 2.5rem 3rem 2rem 4rem;
         text-align: center;
         background: @color2;
         min-height: 100%;
@@ -62,6 +72,9 @@ p {
     }
     &.main-part--right {
         width: 64%;
+        height: 100%;
+        padding: 3.5rem 2rem 2rem 4rem;
+        overflow: auto;
     }
 }
 .my {
@@ -69,12 +82,12 @@ p {
     padding-bottom: 0.5rem;
     text-align: center;
     background: @color2;
-    transition: padding 0.3s ease;
+    transition: padding 0.5s ease;
     &__image-wrap {
         display: inline-block;
         border-radius: 50%;
         border: 0.3rem solid @color3;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
     }
     &__image {
         display: block;
@@ -82,7 +95,7 @@ p {
         vertical-align: top;
         border-radius: 50%;
         border: 0.8rem solid @white;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
     }
     &__name {
         margin: 1.5rem 0 0;
@@ -90,14 +103,14 @@ p {
         font-weight: 700;
         .fsize(24);
         color: @color3;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
     }
     &__activity {
         font-weight: 200;
         .fsize(20);
         margin: 0;
         color: @textColor1;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
     }
     &.scroll-to-fixed-fixed,
     &.small {
@@ -119,10 +132,27 @@ p {
     }
 }
 .my-fond {
-    transition: all 0.3s ease;
+    transition: all 1s ease;
 }
+.mCSB_scrollTools {
+    .mCSB_draggerRail {
+        background: @color1;
+    }
+    .mCSB_dragger .mCSB_dragger_bar {
+        background: @color4;
+
+    }
+    .mCSB_dragger:hover .mCSB_dragger_bar {
+        background: @color4;
+    }
+    .mCSB_dragger:active .mCSB_dragger_bar,
+    .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+        background: @color3;
+    }
+}
+
 .about {
-    margin: 3.5rem 0 0;
+    padding: 3.5rem 0 0;
     text-align: left;
     &__section {
         &:first-child {}
@@ -174,7 +204,7 @@ p {
             top: 50%;
             left: 100%;
             transform: translate(0, -50%);
-            width: 1000%;
+            width: 10000%;
 
             background: @color4;
         }
@@ -193,21 +223,139 @@ p {
     }
 }
 .contact-me__link {
-    display: block;
+    display: inline-block;
+    margin: 1rem 0 0;
     text-decoration: none;
     color: @textColor1;
+    line-height: 3.2rem;
     .fsize(16);
+    .icon {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 0.75rem 0 0.5rem;
+        padding: 0.3rem;
+        width: 3.2rem;
+        height: 3.2rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: 0.2rem solid @color4;
+        border-radius: 50%;
+        transition: background 0.25s ease;
+    }
     &--email {
-
+        .icon {
+            background-image: url(../images/icon-email.svg);
+            background-size: 67%;
+        }
     }
     &--skype {
-
+        .icon {
+            background-image: url(../images/icon-skype.svg);
+            background-size: 62%;
+        }
     }
     &--phone {
+        .icon {
+            background-image: url(../images/icon-phone.svg);
+            background-size: 68%;
+        }
+    }
+}
 
+.section-item {
+    position: relative;
+    margin: 2rem 0;
+    padding: 0 0 0 3.5rem;
+    &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0.5rem;
+        left: 1.5rem;
+        width: 0.9rem;
+        height: 0.9rem;
+        background: @color3;
+        border-radius: 50%;
+    }
+    &__left {
+        display: inline-block;
+        float: left;
+        width: 36%;
+        padding: 0 2rem 0 0;
+        color: @white;
+        .fsize(14);
+        font-weight: 400;
+    }
+    &__right {
+        display: inline-block;
+        float: left;
+        width: 64%;
+        .fsize(14);
+    }
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    &__title {
+        margin: 0;
+        color: @color3;
+        font-weight: 700;
+        .fsize(15);
+        text-transform: uppercase;
+    }
+    &__text {
+        margin: 0;
+        color: @textColor1;
+        .fsize(14);
+        span {
+            display: block;
+        }
+    }
+    .times {
+        color: darken(@textColor1, 10%);
+        text-transform: uppercase;
+    }
+    .responsibilities {
+        color: @textColor1;
+        color: @textColor1;
+        margin: 0;
+        padding: 0;
+        li {
+            position: relative;
+            list-style: none;
+            padding-left: 1.4rem;
+            .fsize(14);
+            &:before {
+                content: ' - ';
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
     }
 }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1800px) {
+    .main-container {
+        max-width: 1280px;
+    }
+}

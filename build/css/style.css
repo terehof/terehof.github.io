@@ -1831,6 +1831,14 @@ p {
 .main-wrapper {
   height: 100%;
 }
+.clear {
+  clear: both;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 .main-container {
   position: relative;
   max-width: 1024px;
@@ -1855,26 +1863,29 @@ p {
   width: 36%;
   height: 100%;
   overflow: auto;
-  padding: 2.5rem 4rem 2rem;
+  padding: 2.5rem 3rem 2rem 4rem;
   text-align: center;
   background: #2E3F4F;
   min-height: 100%;
 }
 .main-part.main-part--right {
   width: 64%;
+  height: 100%;
+  padding: 3.5rem 2rem 2rem 4rem;
+  overflow: auto;
 }
 .my {
   z-index: 1;
   padding-bottom: 0.5rem;
   text-align: center;
   background: #2E3F4F;
-  transition: padding 0.3s ease;
+  transition: padding 0.5s ease;
 }
 .my__image-wrap {
   display: inline-block;
   border-radius: 50%;
   border: 0.3rem solid #06A8D9;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .my__image {
   display: block;
@@ -1882,7 +1893,7 @@ p {
   vertical-align: top;
   border-radius: 50%;
   border: 0.8rem solid #fff;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .my__name {
   margin: 1.5rem 0 0;
@@ -1890,14 +1901,14 @@ p {
   font-weight: 700;
   font-size: 2.4rem;
   color: #06A8D9;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .my__activity {
   font-weight: 200;
   font-size: 2rem;
   margin: 0;
   color: #8F99A2;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .my.scroll-to-fixed-fixed,
 .my.small {
@@ -1922,10 +1933,23 @@ p {
   font-size: 1.8rem;
 }
 .my-fond {
-  transition: all 0.3s ease;
+  transition: all 1s ease;
+}
+.mCSB_scrollTools .mCSB_draggerRail {
+  background: #2C394A;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background: #CACBCF;
+}
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background: #CACBCF;
+}
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background: #06A8D9;
 }
 .about {
-  margin: 3.5rem 0 0;
+  padding: 3.5rem 0 0;
   text-align: left;
 }
 .about__section {
@@ -1971,7 +1995,7 @@ p {
   top: 50%;
   left: 100%;
   transform: translate(0, -50%);
-  width: 1000%;
+  width: 10000%;
   background: #CACBCF;
 }
 .section-title__line {
@@ -1987,9 +2011,114 @@ p {
   color: #06A8D9;
 }
 .contact-me__link {
-  display: block;
+  display: inline-block;
+  margin: 1rem 0 0;
   text-decoration: none;
   color: #8F99A2;
+  line-height: 3.2rem;
   font-size: 1.6rem;
+}
+.contact-me__link .icon {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0.75rem 0 0.5rem;
+  padding: 0.3rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 0.2rem solid #CACBCF;
+  border-radius: 50%;
+  transition: background 0.25s ease;
+}
+.contact-me__link--email .icon {
+  background-image: url(../images/icon-email.svg);
+  background-size: 67%;
+}
+.contact-me__link--skype .icon {
+  background-image: url(../images/icon-skype.svg);
+  background-size: 62%;
+}
+.contact-me__link--phone .icon {
+  background-image: url(../images/icon-phone.svg);
+  background-size: 68%;
+}
+.section-item {
+  position: relative;
+  margin: 2rem 0;
+  padding: 0 0 0 3.5rem;
+}
+.section-item:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0.5rem;
+  left: 1.5rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: #06A8D9;
+  border-radius: 50%;
+}
+.section-item__left {
+  display: inline-block;
+  float: left;
+  width: 36%;
+  padding: 0 2rem 0 0;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.section-item__right {
+  display: inline-block;
+  float: left;
+  width: 64%;
+  font-size: 1.4rem;
+}
+.section-item:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.section-item__title {
+  margin: 0;
+  color: #06A8D9;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.section-item__text {
+  margin: 0;
+  color: #8F99A2;
+  font-size: 1.4rem;
+}
+.section-item__text span {
+  display: block;
+}
+.section-item .times {
+  color: #73808b;
+  text-transform: uppercase;
+}
+.section-item .responsibilities {
+  color: #8F99A2;
+  margin: 0;
+  padding: 0;
+}
+.section-item .responsibilities li {
+  position: relative;
+  list-style: none;
+  padding-left: 1.4rem;
+  font-size: 1.4rem;
+}
+.section-item .responsibilities li:before {
+  content: ' - ';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media (min-width: 1800px) {
+  .main-container {
+    max-width: 1280px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

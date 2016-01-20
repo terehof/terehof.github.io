@@ -20,6 +20,9 @@ define(['jquery'], function ($) {
                     }
                 }
             });
+            $('.main-part--right').mCustomScrollbar({
+                autoHideScrollbar: true
+            });
         },
         avatarFixed: function () {
             var $my = $('.my'),
