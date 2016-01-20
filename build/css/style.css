@@ -1953,8 +1953,10 @@ p {
   text-align: left;
 }
 .about__section {
+  margin: 3rem 0 1.5rem;
+}
+.about__section:first-child {
   margin-top: 0;
-  margin: 3rem 0 0;
 }
 .about-me__text {
   font-size: 1.6rem;
