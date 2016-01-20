@@ -1,2 +1,25 @@
+.setBg(@url, @bgSize: 100%, @bgRepeat: no-repeat) {
+    width: unit(image-width(@url)) * 0.1rem;
+    height: unit(image-height(@url)) * 0.1rem;
+    background-image: url(@url);
+    background-size: @bgSize;
+    background-repeat: no-repeat;
+}
+
+@baseFont: 10;
+.fsize(@sizeValue: @baseFont, @content: @baseFont) {
+    @remValue: @sizeValue/10;
+    font-size: ~"@{remValue}rem";
+}
+
 /*colors*/
 @white: #fff;
+@main-bg: #2C394A;
+
+@color1: #2C394A;
+@color2: #2E3F4F;
+@color3: #06A8D9;
+@color4: #CACBCF;
+
+
+@textColor1: #8F99A2;

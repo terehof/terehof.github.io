@@ -2,16 +2,183 @@
 
 
 html {
-    background: @white;
+    box-sizing: border-box;
+    background: @main-bg;
+    font-size: 10px;
+    height: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 body {
     font-family: 'TT Prosto Sans', Arial;
     font-weight: 400;
+    height: 100%;
 }
-h1 {
-    color: @white;
-    font-size: 30px;
-    margin-top: 500px;
-    transition: all 0.25s ease;
+p {
+    color: @textColor1;
+    .fsize(16);
+}
+.main-wrapper {
+    height: 100%;
+}
+.main-container {
+    position: relative;
+    max-width: 1024px;
+    margin: auto;
+    height: 100%;
+    .part-left-decor {
+        position: absolute;
+        right: 100%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: @color2;
+    }
+}
+.main-part {
+    display: inline-block;
+    float: left;
+    min-height: 100%;
+    &.main-part--left {
+        position: relative;
+        width: 36%;
+        height: 100%;
+        overflow: auto;
+        padding: 2.5rem 4rem 0;
+        text-align: center;
+        background: @color2;
+        min-height: 100%;
+        //&:before {
+        //    content: '';
+        //    display: inline-block;
+        //    position: absolute;
+        //    right: 100%;
+        //    top: 0;
+        //    height: 100%;
+        //    width: 1000%;
+        //    background: @color2;
+        //}
+    }
+    &.main-part--right {
+        width: 64%;
+    }
+}
+.my {
+    text-align: center;
+    &__image-wrap {
+        display: inline-block;
+        border-radius: 50%;
+        border: 0.3rem solid @color3;
+    }
+    &__image {
+        display: block;
+        width: 20rem;
+        vertical-align: top;
+        border-radius: 50%;
+        border: 0.8rem solid @white;
+    }
+    &__name {
+        margin: 1.5rem 0 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        .fsize(24);
+        color: @color3;
+    }
+    &__activity {
+        font-weight: 200;
+        .fsize(20);
+        margin: 0;
+        color: @textColor1;
+    }
+}
+.about {
+    margin: 3.5rem 0 0;
+    text-align: left;
+    &__section {
+        &:first-child {}
+        margin-top: 0;
+        margin: 3rem 0 0;
+    }
+}
+.about-me {
+    &__text {
+        .fsize(16);
+    }
+}
 
+.section-title {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -1rem;
+    &.section-title--about {
+        .icon {
+            width: 3rem;
+            height: 3rem;
+            background-image: url(../images/icon-about.svg);
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: center center;
+        }
+    }
+    &.section-title--contact {
+        .icon {
+            width: 3rem;
+            height: 3rem;
+            background-image: url(../images/icon-contact.svg);
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: center center;
+        }
+    }
+    &__circle {
+        position: relative;
+        display: inline-block;
+        padding: 0.4rem;
+        transform: translate(0, -1.8rem);
+        border-radius: 50%;
+        border: 0.3rem solid @color4;
+        &:after {
+            content: '';
+            height: 0.3rem;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translate(0, -50%);
+            width: 1000%;
+
+            background: @color4;
+        }
+    }
+    &__line {
+        height: 0.3rem;
+        background: @color4;
+    }
+    &__text {
+        margin: 0;
+        .fsize(20);
+        text-align: right;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: @color3;
+    }
 }
+.contact-me__link {
+    display: block;
+    text-decoration: none;
+    color: @textColor1;
+    .fsize(16);
+    &--email {
+
+    }
+    &--skype {
+
+    }
+    &--phone {
+
+    }
+}
+
+
+
+
