@@ -45,7 +45,7 @@ p {
         width: 36%;
         height: 100%;
         overflow: auto;
-        padding: 2.5rem 4rem 0;
+        padding: 2.5rem 4rem 2rem;
         text-align: center;
         background: @color2;
         min-height: 100%;
@@ -65,11 +65,16 @@ p {
     }
 }
 .my {
+    z-index: 1;
+    padding-bottom: 0.5rem;
     text-align: center;
+    background: @color2;
+    transition: padding 0.3s ease;
     &__image-wrap {
         display: inline-block;
         border-radius: 50%;
         border: 0.3rem solid @color3;
+        transition: all 0.3s ease;
     }
     &__image {
         display: block;
@@ -77,6 +82,7 @@ p {
         vertical-align: top;
         border-radius: 50%;
         border: 0.8rem solid @white;
+        transition: all 0.3s ease;
     }
     &__name {
         margin: 1.5rem 0 0;
@@ -84,13 +90,36 @@ p {
         font-weight: 700;
         .fsize(24);
         color: @color3;
+        transition: all 0.3s ease;
     }
     &__activity {
         font-weight: 200;
         .fsize(20);
         margin: 0;
         color: @textColor1;
+        transition: all 0.3s ease;
     }
+    &.scroll-to-fixed-fixed,
+    &.small {
+        padding-bottom: 0.5rem;
+        .my__image-wrap {
+            border: 0.2rem solid #06A8D9;
+        }
+        .my__image {
+            width: 12rem;
+            border: 0.5rem solid #fff;
+        }
+        .my__name {
+            margin: 0.7rem 0 0;
+            .fsize(21);
+        }
+        .my__activity {
+            .fsize(18);
+        }
+    }
+}
+.my-fond {
+    transition: all 0.3s ease;
 }
 .about {
     margin: 3.5rem 0 0;

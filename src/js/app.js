@@ -7,12 +7,15 @@ requirejs.config({
         ],
         velocity: 'lib/velocity.min',
         velocityUI: 'lib/velocity.ui.min',
+        scrollToFixed: 'lib/jquery-scrolltofixed-min',
+        customScrollBar: 'lib/jquery.mCustomScrollbar.concat.min',
+        scrollr: 'skrollr.min',
         main: 'main'
     }
 });
 
 require(['jquery'], function () {
-   require(['main'], function (app) {
+   require(['main', 'scrollToFixed', 'customScrollBar'], function (app) {
        app.init();
    });
 });

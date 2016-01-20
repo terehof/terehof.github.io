@@ -2,10 +2,38 @@ define(['jquery'], function ($) {
     var app = app || {};
     app.main = {
         init: function() {
-            this.test();
+            this.customScroll();
+            this.avatarFixed();
         },
-        test: function () {
-            console.log('test');
+        customScroll: function () {
+            $('.main-part--left').mCustomScrollbar({
+                autoHideScrollbar: true,
+                callbacks:{
+                    whileScrolling: function(){
+                        if (this.mcs.draggerTop > 5) {
+                            $('.my').addClass('small');
+                        } else {
+                            $('.my').removeClass('small');
+                        }
+                        var newH = $('.my').height();
+                        $('.my-fond').css('height', newH);
+                    }
+                }
+            });
+        },
+        avatarFixed: function () {
+            var $my = $('.my'),
+                $myFond = $('.my-fond'),
+                myH = $my.height(),
+                myW = $my.width();
+            $my.css({
+                position: 'fixed',
+                width: myW
+            });
+            $myFond.css({
+                width: myW,
+                height: myH
+            })
         }
     };
 
