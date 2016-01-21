@@ -55,6 +55,13 @@
   font-style: italic;
   font-weight: 700;
 }
+@font-face {
+  font-family: 'TT Prosto Sans';
+  src: url('../fonts/TT-Prosto-Sans/tt_prosto_sans_black.eot');
+  src: url('../fonts/TT-Prosto-Sans/tt_prosto_sans_black.eot?#iefix') format('embedded-opentype'), url('../fonts/TT-Prosto-Sans/tt_prosto_sans_black.woff') format('woff'), url('../fonts/TT-Prosto-Sans/tt_prosto_sans_black.woff2') format('woff2'), url('../fonts/TT-Prosto-Sans/tt_prosto_sans_black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 800;
+}
 /*
 == malihu jquery custom scrollbar plugin ==
 Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
@@ -1871,8 +1878,17 @@ p {
 .main-part.main-part--right {
   width: 64%;
   height: 100%;
-  padding: 3.5rem 2rem 2rem 4rem;
+  padding: 2.5rem 1rem 2rem 4rem;
   overflow: auto;
+}
+.main-part.main-part--right .mCSB_scrollTools .mCSB_draggerRail {
+  background: #2E3F4F;
+}
+.main-part.main-part--right .section {
+  margin: 4rem 0 0;
+}
+.main-part.main-part--right .section:first-child {
+  margin-top: 1rem;
 }
 .my {
   z-index: 1;
@@ -1972,6 +1988,30 @@ p {
   background-image: url(../images/icon-about.svg);
   background-repeat: no-repeat;
   background-size: 60%;
+  background-position: center center;
+}
+.section-title.section-title--work .icon {
+  width: 3rem;
+  height: 3rem;
+  background-image: url(../images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center center;
+}
+.section-title.section-title--education .icon {
+  width: 3rem;
+  height: 3rem;
+  background-image: url(../images/icon-education.svg);
+  background-repeat: no-repeat;
+  background-size: 85%;
+  background-position: center center;
+}
+.section-title.section-title--skills .icon {
+  width: 3rem;
+  height: 3rem;
+  background-image: url(../images/icon-skills.svg);
+  background-repeat: no-repeat;
+  background-size: 67%;
   background-position: center center;
 }
 .section-title.section-title--contact .icon {
@@ -2117,6 +2157,118 @@ p {
   position: absolute;
   left: 0;
   top: 0;
+}
+.skills-left {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  padding: 0 2rem 0 1rem;
+}
+.skills-right {
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+.skill-item {
+  margin-top: 1.5rem;
+}
+.skill-item:after {
+  content: '';
+  display: block;
+  clear: both;
+  width: 100%;
+}
+.skill-item__title {
+  display: inline-block;
+  float: left;
+  width: 40%;
+  font-size: 1.4rem;
+  color: #8F99A2;
+}
+.skill-item__rating {
+  display: inline-block;
+  float: left;
+  width: 60%;
+}
+.skill-item__rating i {
+  display: inline-block;
+  margin-left: 0.75rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  border: 0.3rem solid #8F99A2;
+}
+.skill-item__rating i:first-child {
+  margin-left: 0;
+}
+.skill-item__rating.rate-1 i:nth-child(1) {
+  background: #06A8D9;
+  border-color: #06A8D9;
+}
+.skill-item__rating.rate-2 i:nth-child(1),
+.skill-item__rating.rate-2 i:nth-child(2) {
+  background: #06A8D9;
+  border-color: #06A8D9;
+}
+.skill-item__rating.rate-3 i:nth-child(1),
+.skill-item__rating.rate-3 i:nth-child(2),
+.skill-item__rating.rate-3 i:nth-child(3) {
+  background: #06A8D9;
+  border-color: #06A8D9;
+}
+.skill-item__rating.rate-4 i:nth-child(1),
+.skill-item__rating.rate-4 i:nth-child(2),
+.skill-item__rating.rate-4 i:nth-child(3),
+.skill-item__rating.rate-4 i:nth-child(4) {
+  background: #06A8D9;
+  border-color: #06A8D9;
+}
+.skill-item__rating.rate-5 i:nth-child(1),
+.skill-item__rating.rate-5 i:nth-child(2),
+.skill-item__rating.rate-5 i:nth-child(3),
+.skill-item__rating.rate-5 i:nth-child(4),
+.skill-item__rating.rate-5 i:nth-child(5) {
+  background: #06A8D9;
+  border-color: #06A8D9;
+}
+.section__numerically {
+  width: 100%;
+  margin: 0;
+  padding: 0 1rem;
+  text-align: justify;
+}
+.section__numerically .helper {
+  display: inline-block;
+  height: 0;
+  width: 100%;
+  visibility: hidden;
+}
+.numerically__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 14rem;
+  height: 14rem;
+  text-align: center;
+  color: #06A8D9;
+  border-radius: 50%;
+  border: 0.4rem solid #06A8D9;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+.numerically__item strong {
+  display: block;
+  line-height: 1.2;
+  font-weight: 800;
+  font-size: 3.8rem;
+}
+.number-content {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.number-content .centered {
+  display: table-cell;
+  vertical-align: middle;
 }
 @media (min-width: 1800px) {
   .main-container {

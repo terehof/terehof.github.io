@@ -73,8 +73,19 @@ p {
     &.main-part--right {
         width: 64%;
         height: 100%;
-        padding: 3.5rem 2rem 2rem 4rem;
+        padding: 2.5rem 1rem 2rem 4rem;
         overflow: auto;
+        .mCSB_scrollTools {
+            .mCSB_draggerRail {
+                background: @color2;
+            }
+        }
+        .section {
+            margin: 4rem 0 0;
+            &:first-child {
+                margin-top: 1rem;
+            }
+        }
     }
 }
 .my {
@@ -178,6 +189,36 @@ p {
             background-image: url(../images/icon-about.svg);
             background-repeat: no-repeat;
             background-size: 60%;
+            background-position: center center;
+        }
+    }
+    &.section-title--work {
+        .icon {
+            width: 3rem;
+            height: 3rem;
+            background-image: url(../images/icon-work.svg);
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: center center;
+        }
+    }
+    &.section-title--education {
+        .icon {
+            width: 3rem;
+            height: 3rem;
+            background-image: url(../images/icon-education.svg);
+            background-repeat: no-repeat;
+            background-size: 85%;
+            background-position: center center;
+        }
+    }
+    &.section-title--skills {
+        .icon {
+            width: 3rem;
+            height: 3rem;
+            background-image: url(../images/icon-skills.svg);
+            background-repeat: no-repeat;
+            background-size: 67%;
             background-position: center center;
         }
     }
@@ -337,6 +378,144 @@ p {
         }
     }
 }
+
+.skills-left {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    padding: 0 2rem 0 1rem;
+}
+.skills-right {
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+.skill-item {
+    margin-top: 1.5rem;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+        width: 100%;
+    }
+    &__title {
+        display: inline-block;
+        float: left;
+        width: 40%;
+        .fsize(14);
+        color: @textColor1;
+    }
+    &__rating {
+        display: inline-block;
+        float: left;
+        width: 60%;
+        i {
+            display: inline-block;
+            margin-left: 0.75rem;
+            width: 1.7rem;
+            height: 1.7rem;
+            border-radius: 50%;
+            border: 0.3rem solid @textColor1;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        &.rate {
+            &-1 {
+                i:nth-child(1) {
+                    background: @color3;
+                    border-color: @color3;
+                }
+            }
+            &-2 {
+                i:nth-child(1),
+                i:nth-child(2) {
+                    background: @color3;
+                    border-color: @color3;
+                }
+            }
+            &-3 {
+                i:nth-child(1),
+                i:nth-child(2),
+                i:nth-child(3) {
+                    background: @color3;
+                    border-color: @color3;
+                }
+            }
+            &-4 {
+                i:nth-child(1),
+                i:nth-child(2),
+                i:nth-child(3),
+                i:nth-child(4) {
+                    background: @color3;
+                    border-color: @color3;
+                }
+            }
+            &-5 {
+                i:nth-child(1),
+                i:nth-child(2),
+                i:nth-child(3),
+                i:nth-child(4),
+                i:nth-child(5) {
+                    background: @color3;
+                    border-color: @color3;
+                }
+            }
+        }
+
+    }
+
+}
+
+.section__numerically {
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+    text-align: justify;
+    .helper {
+        display: inline-block;
+        height: 0;
+        width: 100%;
+        visibility: hidden;
+    }
+}
+.numerically__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 14rem;
+    height: 14rem;
+    text-align: center;
+    color: @color3;
+    border-radius: 50%;
+    border: 0.4rem solid @color3;
+    .fsize(15);
+    line-height: 1.2;
+    strong {
+        display: block;
+        line-height: 1.2;
+        font-weight: 800;
+        .fsize(38);
+    }
+}
+.number-content {
+    display: table;
+    width: 100%;
+    height: 100%;
+    .centered {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
