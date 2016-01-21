@@ -14,8 +14,15 @@
         <div class="part-left-decor"></div>
         <div class="main-part main-part--left">
             <div class="my">
-                <div class="my__image-wrap">
-                    <img src="images/me.jpg" alt="" class="my__image">
+                <div class="my__image-wrap flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="images/me.jpg" alt="" class="my__image">
+                        </div>
+                        <div class="back">
+                            <img src="images/me2.jpg" alt="" class="my__image">
+                        </div>
+                    </div>
                 </div>
                 <h1 class="my__name">Sergey Terehov</h1>
                 <h2 class="my__activity">Frontend Developer</h2>

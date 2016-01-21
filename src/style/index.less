@@ -102,7 +102,7 @@ p {
     }
     &__image {
         display: block;
-        width: 20rem;
+        width: 100%;
         vertical-align: top;
         border-radius: 50%;
         border: 0.8rem solid @white;
@@ -130,8 +130,11 @@ p {
             border: 0.2rem solid #06A8D9;
         }
         .my__image {
-            width: 12rem;
             border: 0.5rem solid #fff;
+        }
+        .flip-container {
+            height: 12rem;
+            width: 12rem;
         }
         .my__name {
             margin: 0.7rem 0 0;
@@ -142,6 +145,52 @@ p {
         }
     }
 }
+/* entire container, keeps perspective */
+.flip-container {
+    height: 20rem;
+    width: 20rem;
+    perspective: 1000;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+}
+
 .my-fond {
     transition: all 1s ease;
 }
@@ -533,7 +582,17 @@ p {
 
 
 
-
+@media (max-width: 1400px) {
+    .numerically__item {
+        width: 12rem;
+        height: 12rem;
+        .fsize(14);
+        line-height: 1.1;
+        strong {
+            .fsize(32);
+        }
+    }
+}
 @media (min-width: 1800px) {
     .main-container {
         max-width: 1280px;

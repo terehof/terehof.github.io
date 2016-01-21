@@ -62,6 +62,62 @@
   font-style: normal;
   font-weight: 800;
 }
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu/ubuntu-regular.eot');
+  src: url('../fonts/Ubuntu/ubuntu-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Ubuntu/ubuntu-regular.woff') format('woff'), url('../fonts/Ubuntu/ubuntu-regular.woff2') format('woff2'), url('../fonts/Ubuntu/ubuntu-regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu/ubuntu-light.eot');
+  src: url('../fonts/Ubuntu/ubuntu-light.eot?#iefix') format('embedded-opentype'), url('../fonts/Ubuntu/ubuntu-light.woff') format('woff'), url('../fonts/Ubuntu/ubuntu-light.woff2') format('woff2'), url('../fonts/Ubuntu/ubuntu-light.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu/ubuntu-lightitalic.eot');
+  src: url('../fonts/Ubuntu/ubuntu-lightitalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Ubuntu/ubuntu-lightitalic.woff') format('woff'), url('../fonts/Ubuntu/ubuntu-lightitalic.woff2') format('woff2'), url('../fonts/Ubuntu/ubuntu-lightitalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu/ubuntu-italic.eot');
+  src: url('../fonts/Ubuntu/ubuntu-italic.eot?#iefix') format('embedded-opentype'), url('../fonts/Ubuntu/ubuntu-italic.woff') format('woff'), url('../fonts/Ubuntu/ubuntu-italic.woff2') format('woff2'), url('../fonts/Ubuntu/ubuntu-italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu/ubuntu-medium.eot');
+  src: url('../fonts/Ubuntu/ubuntu-medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Ubuntu/ubuntu-medium.woff') format('woff'), url('../fonts/Ubuntu/ubuntu-medium.woff2') format('woff2'), url('../fonts/Ubuntu/ubuntu-medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu/ubuntu-mediumitalic.eot');
+  src: url('../fonts/Ubuntu/ubuntu-mediumitalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Ubuntu/ubuntu-mediumitalic.woff') format('woff'), url('../fonts/Ubuntu/ubuntu-mediumitalic.woff2') format('woff2'), url('../fonts/Ubuntu/ubuntu-mediumitalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu/ubuntu-bold.eot');
+  src: url('../fonts/Ubuntu/ubuntu-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Ubuntu/ubuntu-bold.woff') format('woff'), url('../fonts/Ubuntu/ubuntu-bold.woff2') format('woff2'), url('../fonts/Ubuntu/ubuntu-bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu/ubuntu-bolditalic.eot');
+  src: url('../fonts/Ubuntu/ubuntu-bolditalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Ubuntu/ubuntu-bolditalic.woff') format('woff'), url('../fonts/Ubuntu/ubuntu-bolditalic.woff2') format('woff2'), url('../fonts/Ubuntu/ubuntu-bolditalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 700;
+}
 /*
 == malihu jquery custom scrollbar plugin ==
 Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
@@ -1905,7 +1961,7 @@ p {
 }
 .my__image {
   display: block;
-  width: 20rem;
+  width: 100%;
   vertical-align: top;
   border-radius: 50%;
   border: 0.8rem solid #fff;
@@ -1936,8 +1992,12 @@ p {
 }
 .my.scroll-to-fixed-fixed .my__image,
 .my.small .my__image {
-  width: 12rem;
   border: 0.5rem solid #fff;
+}
+.my.scroll-to-fixed-fixed .flip-container,
+.my.small .flip-container {
+  height: 12rem;
+  width: 12rem;
 }
 .my.scroll-to-fixed-fixed .my__name,
 .my.small .my__name {
@@ -1947,6 +2007,48 @@ p {
 .my.scroll-to-fixed-fixed .my__activity,
 .my.small .my__activity {
   font-size: 1.8rem;
+}
+/* entire container, keeps perspective */
+.flip-container {
+  height: 20rem;
+  width: 20rem;
+  perspective: 1000;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+}
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* hide back of pane during swap */
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
 }
 .my-fond {
   transition: all 1s ease;
@@ -2269,6 +2371,17 @@ p {
 .number-content .centered {
   display: table-cell;
   vertical-align: middle;
+}
+@media (max-width: 1400px) {
+  .numerically__item {
+    width: 12rem;
+    height: 12rem;
+    font-size: 1.4rem;
+    line-height: 1.1;
+  }
+  .numerically__item strong {
+    font-size: 3.2rem;
+  }
 }
 @media (min-width: 1800px) {
   .main-container {
