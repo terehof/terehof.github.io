@@ -21,11 +21,11 @@ var reload = browserSync.reload;
 
 var path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
-        js: 'build/js/',
-        html: 'build/',
-        css: 'build/css/',
-        img: 'build/images/',
-        fonts: 'build/fonts/'
+        js: 'js/',
+        html: './',
+        css: 'css/',
+        img: 'images/',
+        fonts: 'fonts/'
     },
     src: {
         js: 'src/js/**/**/*.js',
@@ -89,7 +89,7 @@ gulp.task('style-min', function () {
 });
 gulp.task('js', function () {
     return gulp.src([path.src.js])
-        .pipe(uglify())
+        //.pipe(uglify())
         //.pipe(concat('main.js'))
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({ stream:true }));
