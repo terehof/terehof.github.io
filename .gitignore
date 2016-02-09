@@ -3,6 +3,3 @@
 /.idea/*
 /node_modules
 /build
-/css
-/js
-index.html
