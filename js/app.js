@@ -8,14 +8,16 @@ requirejs.config({
         velocity: 'lib/velocity.min',
         velocityUI: 'lib/velocity.ui.min',
         scrollToFixed: 'lib/jquery-scrolltofixed-min',
+        mousewheel: 'lib/jquery.mousewheel',
         customScrollBar: 'lib/jquery.mCustomScrollbar.concat.min',
+        jScrollPane: 'lib/jquery.jscrollpane.min',
         scrollr: 'skrollr.min',
         main: 'main'
     }
 });
 
 require(['jquery'], function () {
-   require(['main', 'scrollToFixed', 'customScrollBar'], function (app) {
+   require(['main', 'scrollToFixed', 'mousewheel', 'jScrollPane'], function (app) {
        app.init();
    });
 });

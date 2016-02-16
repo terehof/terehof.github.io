@@ -3,25 +3,14 @@ define(['jquery'], function ($) {
     app.main = {
         init: function() {
             this.customScroll();
-            this.avatarFixed();
+            //this.avatarFixed();
         },
         customScroll: function () {
-            $('.main-part--left').mCustomScrollbar({
-                autoHideScrollbar: true,
-                callbacks:{
-                    whileScrolling: function(){
-                        if (this.mcs.draggerTop > 5) {
-                            $('.my').addClass('small');
-                        } else {
-                            $('.my').removeClass('small');
-                        }
-                        var newH = $('.my').height();
-                        $('.my-fond').css('height', newH);
-                    }
-                }
+            $('.main-part--left').jScrollPane({
+                autoReinitialise: true
             });
-            $('.main-part--right').mCustomScrollbar({
-                autoHideScrollbar: true
+            $('.main-part--right').jScrollPane({
+                autoReinitialise: true
             });
         },
         avatarFixed: function () {

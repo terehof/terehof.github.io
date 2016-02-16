@@ -107,7 +107,7 @@ gulp.task('js-min', function () {
 gulp.task('dev-watch', ['dev'], function () {
     browserSync.init({
         server: {
-            baseDir: "./build",
+            baseDir: "./",
             middleware: [historyApiFallback({})]
         }
     });
