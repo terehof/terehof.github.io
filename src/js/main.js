@@ -21,7 +21,6 @@ define(['jquery'], function ($) {
             setTimeout(function () {
                 $('.main-part--right').css('opacity', 1);
             }, 200);
-
         },
         avatarFixed: function () {
             var $my = $('.my'),
