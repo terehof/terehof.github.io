@@ -13,11 +13,15 @@ define(['jquery'], function ($) {
             }, 5000);
         },
         customScroll: function () {
-
             $('.scroll-wrap').jScrollPane({
                 autoReinitialise: true,
                 verticalGutter: 30
             });
+            $('.main-part--left, .part-left-decor').css('opacity', 1);
+            setTimeout(function () {
+                $('.main-part--right').css('opacity', 1);
+            }, 200);
+
         },
         avatarFixed: function () {
             var $my = $('.my'),
