@@ -652,7 +652,7 @@ p {
   height: 100%;
   background: #2E3F4F;
   opacity: 0;
-  transition: opacity 0.25s;
+  transition: opacity 0.3s;
 }
 .main-part {
   display: inline-block;
@@ -669,7 +669,7 @@ p {
   background: #2E3F4F;
   min-height: 100%;
   opacity: 0;
-  transition: opacity 0.25s;
+  transition: opacity 0.3s;
 }
 .main-part.main-part--right {
   float: right;
@@ -677,7 +677,7 @@ p {
   height: 100%;
   padding: 2.5rem 1rem 2rem 4rem;
   opacity: 0;
-  transition: opacity 0.25s;
+  transition: opacity 0.3s;
 }
 .main-part.main-part--right .mCSB_scrollTools .mCSB_draggerRail {
   background: #2E3F4F;

@@ -18,9 +18,7 @@ define(['jquery'], function ($) {
                 verticalGutter: 30
             });
             $('.main-part--left, .part-left-decor').css('opacity', 1);
-            setTimeout(function () {
-                $('.main-part--right').css('opacity', 1);
-            }, 200);
+            $('.main-part--right').css('opacity', 1);
         },
         avatarFixed: function () {
             var $my = $('.my'),
