@@ -9,6 +9,11 @@
 {
 	overflow: hidden;
 	position: relative;
+	&:hover {
+		.jspVerticalBar {
+			opacity: 1;
+		}
+	}
 }
 
 .jspPane
@@ -21,9 +26,11 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 16px;
+	width: 0.4rem;
 	height: 100%;
 	background: red;
+	opacity: 0;
+	transition: opacity 0.25s;
 }
 
 .jspHorizontalBar
@@ -48,13 +55,13 @@
 
 .jspTrack
 {
-	background: #dde;
+	background: @color4;
 	position: relative;
 }
 
 .jspDrag
 {
-	background: #bbd;
+	background: @color3;
 	position: relative;
 	top: 0;
 	left: 0;

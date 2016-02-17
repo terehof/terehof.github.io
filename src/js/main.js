@@ -6,11 +6,10 @@ define(['jquery'], function ($) {
             //this.avatarFixed();
         },
         customScroll: function () {
-            $('.main-part--left').jScrollPane({
-                autoReinitialise: true
-            });
-            $('.main-part--right').jScrollPane({
-                autoReinitialise: true
+
+            $('.scroll-wrap').jScrollPane({
+                autoReinitialise: true,
+                verticalGutter: 30
             });
         },
         avatarFixed: function () {
