@@ -3,14 +3,35 @@ define(['jquery'], function ($) {
     app.main = {
         init: function() {
             this.changeBg();
+            this.greetingsPopup();
             this.customScroll();
             //this.avatarFixed();
         },
         changeBg: function () {
             setTimeout(function () {
-                $('html').addClass('changeBg1');
+                $('body').addClass('changeBg1');
                 $('.main-part--left, .part-left-decor').addClass('changeBg2');
-            }, 5000);
+            }, 15000);
+        },
+        greetingsPopup: function () {
+            //if (!$.cookie('greetPopup')) {
+                $.cookie('greetPopup', true);
+                var hoursNow = new Date();
+                hoursNow = hoursNow.getHours();
+                var greetText = 'Good morning!';
+
+                if (hoursNow < 12) {
+                    greetText = 'Good morning!';
+                } else if (hoursNow < 17) {
+                    greetText = 'Good afternoon!';
+                } else if (hoursNow < 24) {
+                    greetText = 'Good evening!';
+                }
+                $('.jsGreetText').html(greetText);
+
+                Avgrund.show('#greetings-popup');
+            //}
+
         },
         customScroll: function () {
             $('.scroll-wrap').jScrollPane({

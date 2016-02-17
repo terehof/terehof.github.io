@@ -11,13 +11,14 @@ requirejs.config({
         mousewheel: 'lib/jquery.mousewheel',
         customScrollBar: 'lib/jquery.mCustomScrollbar.concat.min',
         jScrollPane: 'lib/jquery.jscrollpane.min',
-        scrollr: 'skrollr.min',
+        cookie: 'lib/jquery.cookie',
+        avgrund: 'lib/avgrund',
         main: 'main'
     }
 });
 
 require(['jquery'], function () {
-   require(['main', 'scrollToFixed', 'mousewheel', 'jScrollPane'], function (app) {
+   require(['main','avgrund', 'scrollToFixed', 'mousewheel', 'jScrollPane', 'cookie'], function (app) {
        app.init();
    });
 });

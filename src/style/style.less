@@ -3,19 +3,21 @@
 @import "fonts";
 @import "popups";
 @import "jscrollpane";
+@import "avgrund";
 
 
 
 html {
     box-sizing: border-box;
-    background: @main-bg;
     font-size: 10px;
     height: 100%;
+    background: #000;
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
 body {
+    background: @main-bg;
     font-family: 'TT Prosto Sans', Arial;
     font-weight: 400;
     height: 100%;
@@ -26,6 +28,7 @@ p {
 }
 .main-wrapper {
     height: 100%;
+    overflow: hidden;
 }
 .clear {
     clear: both;
