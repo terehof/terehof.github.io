@@ -2,8 +2,15 @@ define(['jquery'], function ($) {
     var app = app || {};
     app.main = {
         init: function() {
+            this.changeBg();
             this.customScroll();
             //this.avatarFixed();
+        },
+        changeBg: function () {
+            setTimeout(function () {
+                $('html').addClass('changeBg1');
+                $('.main-part--left, .part-left-decor').addClass('changeBg2');
+            }, 5000);
         },
         customScroll: function () {
 
