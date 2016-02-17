@@ -354,6 +354,24 @@ th {
   padding: 0;
 }
 /*colors*/
+.changeBg1 {
+  transition: background 10s linear;
+  animation: changeBg 50s linear infinite;
+}
+.changeBg2 {
+  transition: background 10s linear;
+  animation: changeBg2 50s linear infinite;
+}
+@keyframes changeBg1 {
+  0% {
+    background: red;
+  }
+}
+@keyframes changeBg2 {
+  0% {
+    background: red;
+  }
+}
 @font-face {
   font-family: 'TT Prosto Sans';
   src: url('../fonts/TT-Prosto-Sans/tt_prosto_sans_regular.eot');
@@ -566,6 +584,8 @@ html {
   background: #2C394A;
   font-size: 10px;
   height: 100%;
+  transition: background 10s linear;
+  animation: changeBg 50s linear infinite;
 }
 *,
 *:before,
@@ -605,6 +625,8 @@ p {
   width: 100%;
   height: 100%;
   background: #2E3F4F;
+  transition: background 10s linear;
+  animation: changeBg2 50s linear infinite;
 }
 .main-part {
   display: inline-block;
@@ -620,6 +642,8 @@ p {
   text-align: center;
   background: #2E3F4F;
   min-height: 100%;
+  transition: background 10s linear;
+  animation: changeBg2 50s linear infinite;
 }
 .main-part.main-part--right {
   float: right;
@@ -1042,8 +1066,8 @@ p {
 .numerically__item {
   display: inline-block;
   vertical-align: top;
-  width: 14rem;
-  height: 14rem;
+  width: 13rem;
+  height: 13rem;
   text-align: center;
   color: #06A8D9;
   border-radius: 50%;
