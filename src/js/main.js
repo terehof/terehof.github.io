@@ -14,7 +14,7 @@ define(['jquery'], function ($) {
             }, 15000);
         },
         greetingsPopup: function () {
-            //if (!$.cookie('greetPopup')) {
+            if (!$.cookie('greetPopup')) {
                 $.cookie('greetPopup', true);
                 var hoursNow = new Date();
                 hoursNow = hoursNow.getHours();
@@ -30,7 +30,7 @@ define(['jquery'], function ($) {
                 $('.jsGreetText').html(greetText);
 
                 Avgrund.show('#greetings-popup');
-            //}
+            }
 
         },
         customScroll: function () {
