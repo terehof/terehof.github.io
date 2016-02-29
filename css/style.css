@@ -758,6 +758,7 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  outline: none;
 }
 body {
   background: #2C394A;
@@ -834,6 +835,7 @@ p {
 .scroll-wrap {
   overflow: hidden;
   height: 100%;
+  outline: hidden;
 }
 .my {
   z-index: 1;
