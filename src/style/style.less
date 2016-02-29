@@ -575,7 +575,9 @@ p {
     }
 }
 
-
+.xs-visible {
+    display: none;
+}
 
 
 
@@ -615,5 +617,94 @@ p {
 @media (min-width: 1800px) {
     .main-container {
         max-width: 1180px;
+    }
+}
+@media (max-width: 960px) {
+    .numerically__item {
+        width: 11rem;
+        height: 11rem;
+        .fsize(13);
+        strong {
+            .fsize(26);
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .main-wrapper {
+        overflow: auto;
+    }
+    .part-left-decor {
+        display: none;
+    }
+    .main-part {
+        &.main-part--left {
+            display: block;
+            float: none;
+            width: 100%;
+            height: auto;
+            padding: 2.5rem 5% 2rem 5%;
+        }
+        &.main-part--right {
+            display: block;
+            float: none;
+            width: 100%;
+            height: auto;
+            padding: 2.5rem 5% 2rem 5%;
+        }
+    }
+}
+@media (max-width: 580px) {
+    .numerically__item {
+        strong {
+            .fsize(28);
+        }
+        width: 16rem;
+        height: 16rem;
+        font-size: 1.7rem;
+        margin: 0 0 2rem;
+    }
+}
+@media (max-width: 520px) {
+    .skills-left,
+    .skills-right {
+        display: block;
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .skill-item {
+        &__title {
+            width: auto;
+            .fsize(17);
+        }
+        &__rating {
+            width: 12rem;
+            float: right;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .xs-visible {
+        display: block;
+    }
+    .my {
+        &.small {
+            .my__name {
+                .fsize(29);
+            }
+            .my__activity {
+                .fsize(22);
+            }
+        }
+    }
+    .about-me {
+        &__text {
+            .fsize(17);
+        }
+    }
+    .contact-me__link {
+        .fsize(17);
     }
 }

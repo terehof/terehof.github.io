@@ -34,10 +34,12 @@ define(['jquery'], function ($) {
 
         },
         customScroll: function () {
-            $('.scroll-wrap').jScrollPane({
-                autoReinitialise: true,
-                verticalGutter: 30
-            });
+            if ( $(window).width() > 860 ) {
+                $('.scroll-wrap').jScrollPane({
+                    autoReinitialise: true,
+                    verticalGutter: 30
+                });
+            }
             $('.main-part--left, .part-left-decor').css('opacity', 1);
             $('.main-part--right').css('opacity', 1);
         },

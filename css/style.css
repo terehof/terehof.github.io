@@ -1262,6 +1262,9 @@ p {
   display: table-cell;
   vertical-align: middle;
 }
+.xs-visible {
+  display: none;
+}
 @media (max-width: 1400px) {
   .numerically__item {
     width: 12rem;
@@ -1276,6 +1279,83 @@ p {
 @media (min-width: 1800px) {
   .main-container {
     max-width: 1180px;
+  }
+}
+@media (max-width: 960px) {
+  .numerically__item {
+    width: 11rem;
+    height: 11rem;
+    font-size: 1.3rem;
+  }
+  .numerically__item strong {
+    font-size: 2.6rem;
+  }
+}
+@media (max-width: 860px) {
+  .main-wrapper {
+    overflow: auto;
+  }
+  .part-left-decor {
+    display: none;
+  }
+  .main-part.main-part--left {
+    display: block;
+    float: none;
+    width: 100%;
+    height: auto;
+    padding: 2.5rem 5% 2rem 5%;
+  }
+  .main-part.main-part--right {
+    display: block;
+    float: none;
+    width: 100%;
+    height: auto;
+    padding: 2.5rem 5% 2rem 5%;
+  }
+}
+@media (max-width: 580px) {
+  .numerically__item {
+    width: 16rem;
+    height: 16rem;
+    font-size: 1.7rem;
+    margin: 0 0 2rem;
+  }
+  .numerically__item strong {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 520px) {
+  .skills-left,
+  .skills-right {
+    display: block;
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+  .skill-item__title {
+    width: auto;
+    font-size: 1.7rem;
+  }
+  .skill-item__rating {
+    width: 12rem;
+    float: right;
+  }
+}
+@media (max-width: 480px) {
+  .xs-visible {
+    display: block;
+  }
+  .my.small .my__name {
+    font-size: 2.9rem;
+  }
+  .my.small .my__activity {
+    font-size: 2.2rem;
+  }
+  .about-me__text {
+    font-size: 1.7rem;
+  }
+  .contact-me__link {
+    font-size: 1.7rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
