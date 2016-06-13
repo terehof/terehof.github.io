@@ -995,7 +995,7 @@ p {
   height: 3rem;
   background-image: url(../images/icon-education.svg);
   background-repeat: no-repeat;
-  background-size: 75%;
+  background-size: 85%;
   background-position: center center;
 }
 .section-title.section-title--projects .icon {
@@ -1003,7 +1003,7 @@ p {
   height: 3rem;
   background-image: url(../images/icon-projects.svg);
   background-repeat: no-repeat;
-  background-size: 85%;
+  background-size: 75%;
   background-position: center center;
 }
 .section-title.section-title--skills .icon {
