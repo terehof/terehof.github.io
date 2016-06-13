@@ -995,6 +995,14 @@ p {
   height: 3rem;
   background-image: url(../images/icon-education.svg);
   background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center center;
+}
+.section-title.section-title--projects .icon {
+  width: 3rem;
+  height: 3rem;
+  background-image: url(../images/icon-projects.svg);
+  background-repeat: no-repeat;
   background-size: 85%;
   background-position: center center;
 }
@@ -1264,6 +1272,43 @@ p {
 }
 .xs-visible {
   display: none;
+}
+.projects-list {
+  margin: 1rem 0;
+}
+.projects-list ul {
+  margin: 0;
+  padding: 0;
+}
+.projects-list ul li {
+  display: block;
+  margin: 1rem 0;
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 3.5rem;
+  color: #8F99A2;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+.projects-list ul li:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0.5rem;
+  left: 1.5rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: #06A8D9;
+  border-radius: 50%;
+}
+.projects-list a {
+  color: #fff;
+  text-decoration: underline;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+.projects-list a:hover {
+  text-decoration: none;
 }
 @media (max-width: 1400px) {
   .numerically__item {
