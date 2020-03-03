@@ -19,7 +19,7 @@ var reload = browserSync.reload;
 
 var path = {
     build: {
-        pug: '/',
+        pug: '',
         js: 'js/',
         css: 'css/',
         img: 'img/',

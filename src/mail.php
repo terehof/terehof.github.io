@@ -1,9 +1,9 @@
 <?php
 
 $frm_name  = 'terehov.space'; // from name
-$frm_mail = "terehovsergej@terehov.space";
+$frm_mail = "terehovsergej@terehof.github.io";
 $recepient = 'terehovsergej@gmail.com';
-$sitename  = 'terehov.space';
+$sitename  = 'terehof.github.io';
 $subject   = 'Ахтунг!!! Сообщение с сайта!';
 
 
