@@ -1,0 +1,138 @@
+extends layout/layout
+
+block title
+    | Sergey Terehov | Web-development
+
+block content
+    include components/header
+
+    section.section.section-home#home
+        .section-home__video-bg
+            .video-wrap
+                video(autoplay muted loop poster="img/Travaho.jpg")
+                    source(src="video/Travaho.mp4" type="video/mp4")
+                    source(src="video/Travaho.webm" type="video/webm")
+        .section-home__content#home-content(data-enllax-ratio="-0.23" data-enllax-type="foreground")
+            .section-home__title.
+                Hello! My name is Sergey.
+                <br>
+                I make <div id="typed" class="typed"></div>
+            .section-home__subtitle I strive to make this <span>world</span> web better.
+            a.section-home__button.btn-primary.btn-primary--lg.scrollto(href="#portfolio") Go to portfolio
+
+    section.section.section-services#services
+        .container
+            h2.section__title My Services
+
+            .services-list
+
+                -var myServices = services
+
+                each service in myServices
+                    .service
+                        img.service__icon(src="img/services/"+service.icon)
+                        p.service__title!= service.title
+                        .service__descrip!= service.text
+
+    section.section.section-portfolio#portfolio
+        .container
+            h2.section__title Some of my works
+                p.section__subtitle Want to see more examples? <a href="mailto:terehovsergej@gmail.com">Email me</a>.
+
+            .projects-filter
+                .projects-filter__item.active(data-filter="*") All
+                .projects-filter__item(data-filter=".wordpress") Wordpress
+                .projects-filter__item(data-filter=".psd2html") PSD-to-HTML
+                .projects-filter__item(data-filter=".responsive") Responsive
+
+
+            -var myProjects = projects;
+            .projects
+                each project, index in myProjects
+                    div(class='project ' + project.tags data-fancybox data-type="ajax" data-src="/project-modals.html" data-filter="#"+index)
+                        .project__inner
+                        .project__bg
+                            img(src='img/projects/'+ project.imageSmall alt=project.title data-duration=project.animDuration)
+                        .project__text
+                            .project__title!= project.title
+                            .project__subtitle!= project.descrip
+                            .project__btn More
+
+    section.section.section-feedbacks#feedbacks
+        .container
+            h2.section__title A Few Feedbacks
+                p.section__subtitle What clients say about me
+
+            -var myFeedbacks = feedbacks
+            .feedbacks
+                each feedback in myFeedbacks
+                    .feedback
+                        i.feedback__icon.fa.fa-quote-left(aria-hidden="true")
+                        blockquote.feedback__text= feedback.text
+                        p.feedback__author= feedback.author
+
+            a.all-feedbacks-link(href="https://www.upwork.com/o/profiles/users/_~011cae1b0c8033da54/" target="_blank") More feedbacks on UpWork
+
+
+
+
+    section.section.section-contacts#contacts
+        .container
+            h2.section__title Want to work together?
+
+            p.section-contacts__subtitle Contact me in any convenient way:
+
+            .my-contacts
+                .my-contact
+                    a(href="mailto:terehovsergej@gmail.com")
+                        i.fa.fa-envelope
+                        | terehovsergej@gmail.com
+                .my-contact
+                    a(href="skype:serega_terehov")
+                        i.fa.fa-skype
+                        | serega_terehov
+                .my-contact
+                    a(href="tel:+380993612228")
+                        i.fa.fa-phone
+                        | +38 099 361 22 28
+                .my-contact
+                    a(href="https://wa.me/380993612228" target="_blank")
+                        i.fa.fa-whatsapp
+                        | +38 099 361 22 28
+                .my-contact
+                    a(href="tg://resolve?domain=terehovsergej")
+                        i.fa.fa-telegram
+                        | +38 099 361 22 28
+                .my-contact
+                    a(href="https://www.upwork.com/o/profiles/users/_~011cae1b0c8033da54/" target="_blank")
+                        i.icon-upwork
+                            | <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            |      viewBox="0 0 36 26" style="enable-background:new 0 0 36 26;" xml:space="preserve">
+                            | <path d="M27.4,2.9c-3.8,0-6.7,2.5-7.8,6.5c-1.8-2.8-3.2-6-4-8.7h-4v10.6c0,2.1-1.7,3.8-3.8,3.8c-2.1,0-3.8-1.7-3.8-3.8
+                            |     V0.7H0v10.6c0,4.4,3.5,7.9,7.8,7.9c4.3,0,7.8-3.5,7.8-7.9V9.5c0.8,1.6,1.8,3.3,2.9,4.8L16,26h4.1l1.8-8.5c1.6,1,3.4,1.6,5.5,1.6
+                            |     c4.4,0,8-3.6,8-8.2C35.4,6.5,31.8,2.9,27.4,2.9z M27.4,15c-1.6,0-3.2-0.7-4.5-1.8l0.4-1.6v-0.1c0.3-1.7,1.2-4.6,4.2-4.6
+                            |     c2.2,0,4,1.8,4,4C31.4,13.2,29.5,15,27.4,15z"/>
+                            | </svg>
+                        | upwork.com
+
+            p.section-contacts__subtitle Or by this form:
+
+            .contact-form
+                form(action="#" id="contact-form")
+                    .input-wrap
+                        input(type="text" id="name" name="name" class="input" required)
+                        label(for="name" class="placeholder") Your Name
+                    .input-wrap
+                        input(type="text" id="email" name="email" class="input" required)
+                        label(for="email" class="placeholder") Your Email or Phone
+                    .input-wrap
+                        textarea(id="message" name="message" class="textarea" required)
+                        label(for="message" class="placeholder") You Message
+                    button(type="submit" class="btn-primary btn-primary--sm submit-btn") Send message
+
+                    div.dispatch-message
+
+
+    footer.page-footer
+        .container
+            p.copyright Handmade by me © 2014-2019.

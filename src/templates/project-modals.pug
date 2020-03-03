@@ -1,0 +1,9 @@
+-var myProjects = projects;
+    each project, index in myProjects
+        div.project-modal(id=index)
+            .project-modal__info
+                .project-modal__link-wrap
+                    a.project-modal__link(href=project.url target="_blank")= project.url_to_show
+            img(src="img/projects/"+project.imageBig class="project-modal__preview")
+
+

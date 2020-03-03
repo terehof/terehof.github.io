@@ -1,0 +1,176 @@
+{
+  "projects": {
+    "casinogold": {
+      "tags": "psd2html wordpress responsive",
+      "title": "Casino Gold Corp.",
+      "descrip": "PSD to HTML coding and creating WordPress theme",
+      "url": "https://casinogold.ca/",
+      "url_to_show": "casinogold.ca",
+      "imageSmall": "casinogold-small.jpg",
+      "imageBig": "casinogold-big.jpg"
+    },
+    "cafemiranda": {
+      "tags": "wordpress responsive",
+      "title": "Cafe Miranda",
+      "descrip": "Creating WordPress theme, with WooCommerce",
+      "url": "https://www.cafemiranda.com/",
+      "url_to_show": "cafemiranda.com",
+      "imageSmall": "cafemiranda-small.jpg",
+      "imageBig": "cafemiranda-big.jpg"
+    },
+    "radiofuels": {
+      "tags": "psd2html wordpress responsive",
+      "title": "Radio Fuels Corp.",
+      "descrip": "PSD to HTML coding and creating WordPress theme",
+      "url": "https://radiofuels.ca/",
+      "url_to_show": "radiofuels.ca",
+      "imageSmall": "RadioFuels-small.jpg",
+      "imageBig": "RadioFuels-big.jpg"
+    },
+    "goldspot": {
+      "tags": "psd2html wordpress responsive",
+      "title": "GoldSpot Discoveries",
+      "descrip": "PSD to HTML coding and creating WordPress theme",
+      "url": "https://goldspot.ca/",
+      "url_to_show": "goldspot.ca",
+      "imageSmall": "GoldSpot-small.jpg",
+      "imageBig": "GoldSpot-big.jpg"
+    },
+    "venture": {
+      "tags": "psd2html wordpress responsive",
+      "title": "Venture Ad Network",
+      "descrip": "Design and develop landing page",
+      "url": "https://ventureadnetwork.com/",
+      "url_to_show": "ventureadnetwork.com",
+      "imageSmall": "VentureAd-small.jpg",
+      "imageBig": "VentureAd-big.jpg"
+    },
+    "faceter": {
+      "tags": "psd2html responsive",
+      "title": "Faceter",
+      "descrip": "Zeplin to HTML coding for landing page",
+      "url": "https://faceter.io/",
+      "url_to_show": "faceter.io",
+      "imageSmall": "Faceter-small.jpg",
+      "imageBig": "Faceter-big.jpg"
+    },
+    "bruck": {
+      "tags": "psd2html responsive",
+      "title": "Bruck Consult",
+      "descrip": "PSD to HTML coding for consulting firm website",
+      "url": "https://www.bruckconsult.com/",
+      "url_to_show": "bruckconsult.com",
+      "imageSmall": "BruckConsult-small.jpg",
+      "imageBig": "BruckConsult-big.jpg"
+    },
+    "inside": {
+      "tags": "wordpress psd2html responsive",
+      "title": "Inside",
+      "descrip": "PSD to HTML coding for consulting firm website",
+      "url": "https://www.inside-solutions.de/",
+      "url_to_show": "inside-solutions.de",
+      "imageSmall": "Inside-small.jpg",
+      "imageBig": "Inside-big.jpg"
+    },
+    "avi": {
+      "tags": "psd2html",
+      "title": "Avi Invest",
+      "descrip": "PSD to HTML coding for corporate website",
+      "url": "http://xn----ctbjkcaab2bq2aei1du.xn--p1ai/",
+      "url_to_show": "инвестиции-сочи.рф",
+      "imageSmall": "AviInvest-small.jpg",
+      "imageBig": "AviInvest-big.jpg"
+    },
+    "consultant": {
+      "tags": "wordpress",
+      "title": "Consultant",
+      "descrip": "Creating Wordpress theme",
+      "url": "http://xn-----7kcbj6ajjfngdihtrkh8t.xn--p1ai/",
+      "url_to_show": "юрист-онлайн-москва.рф",
+      "imageSmall": "Consultant-small.jpg",
+      "imageBig": "Consultant-big.jpg"
+    },
+    "mono": {
+      "tags": "psd2html",
+      "title": "Mono Design",
+      "descrip": "Creating Wordpress theme",
+      "url": "http://mono-design.ru/",
+      "url_to_show": "mono-design.ru",
+      "imageSmall": "Mono-small.jpg",
+      "imageBig": "Mono-big.jpg"
+    },
+    "slowemotion": {
+      "tags": "psd2html responsive",
+      "title": "Slowemotion",
+      "descrip": "Creating Wordpress theme",
+      "url": "https://slowemotion.com.ua/",
+      "url_to_show": "slowemotion.com.ua",
+      "imageSmall": "Slowemotion-small.jpg",
+      "imageBig": "Slowemotion-big.jpg"
+    }
+  },
+
+  "feedbacks": [
+    {
+      "text": "Sergey is without a doubt one of the best freelancers we have worked with to date. I look forward to many project with Sergey in the future.",
+      "author": "Joe R."
+    },
+    {
+      "text": "It was great working with Sergey. If you need someone for your worpress website, you should hire him. I look forward to working with him again.",
+      "author": "Isabel G."
+    },
+    {
+      "text": "One of the best freelancers I have worked with. Competent, professional, and a pleasure to talk to. Looking forward to the next project to work with Sergey!",
+      "author": "Joe R."
+    },
+    {
+      "text": "HIRE Sergey! He's the best!! When it comes to creating professional, attractive, and effective websites, there is no one that can surpass Sergey. He's quick to respond, happy to meet your needs, and an all-around fantastic developer and designer. He is detailed, organized, creative, and just truly a pleasure to work with.",
+      "author": "Susan L."
+    },
+    {
+      "text": "Excellent PSD TO HTML coder and superb quality, thank you!",
+      "author": "Shahid H."
+    },
+    {
+      "text": "Sergey was extremely fast in fixing my issue and in fact was the only freelancer who was proactive in guiding me with a solution right at the start. Confident teacher and very helpful and expert in diagnosing my problem and coming up with the perfect solution. Would hire again for sure!",
+      "author": "Kaizen Ltd."
+    },
+    {
+      "text": "Sergey is absolutely fantastic to work with! Highly skilled, fast, professional and easy to communicate with! Will use him again for any future needs!",
+      "author": "Susan L."
+    }
+  ],
+
+  "services": [
+    {
+      "icon": "1-psd-to-html.svg",
+      "title": "PSD-to-HTML <br>coding",
+      "text": "High-quality, pretty, valid code. I love coding things from scratch, but I can work with front-end frameworks like Bootstrap too. Also work with .sketch/Zeplin mockups."
+    },
+    {
+      "icon": "2-wordpress.svg",
+      "title": "Wordpress websites <br>development",
+      "text": "Creating unique and professional design, wordpress theme development (coding), domain and hosting registration, filling content."
+    },
+    {
+      "icon": "3-animations.svg",
+      "title": "Creating CSS/SVG/JS animations",
+      "text": "I have a lot of experience with CSS3 animations. Also I love to work with SVG to create optimize and high-performance animations."
+    },
+    {
+      "icon": "4-creating.svg",
+      "title": "Creating additional <br> functionality",
+      "text": "Photogalleries, sliders, calculators, video players, maps, popups, callback forms etc."
+    },
+    {
+      "icon": "5-support.svg",
+      "title": "Support for your <br> website",
+      "text": "Further support and administration <br>of your websites."
+    },
+    {
+      "icon": "6-consulting.svg",
+      "title": "Consulting <br>services",
+      "text": "Сonsultations on the issues of front-end development, html-coding"
+    }
+  ]
+}

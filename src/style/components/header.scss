@@ -1,0 +1,238 @@
+@import "../base/variables";
+.page-header {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba($color2, 0.9);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 1px 5px rgba($color3, 0.4);
+    @media (min-width: 1025px) {
+        transition: transform 0.5s $easeInOutCubic;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &.headroom--unpinned {
+        transform: translate(0, -120%);
+        @media (max-width: 960px) {
+            transform: translate(0, -6.5rem);
+        }
+    }
+    &.headroom--pinned {
+
+    }
+    @media (max-width: 960px) {
+        box-shadow: none;
+    }
+}
+.main-menu {
+    display: flex;
+    a {
+        display: inline-block;
+        padding: 0.3rem 0.5rem;
+        border-radius: 0.3rem;
+        margin-left: 2rem;
+        text-decoration: none;
+        color: $color3;
+        //background: rgba($color2, 0.9);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        transition: all 0.25s ease;
+        &:hover {
+            background: $color3;
+            color: $color2;
+        }
+        &.active {
+            background: $color3;
+            color: $color2;
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+        i {
+            transition: all 0.25s ease;
+            &:before {
+                transition: all 0.25s ease;
+            }
+        }
+    }
+}
+.header-links {
+    display: flex;
+    a {
+        display: inline-block;
+        padding: 0.2rem 0.5rem;
+        margin-left: 1rem;
+        font-size: 2.6rem;
+        color: $color3;
+        //background: rgba($color2, 0.9);
+        text-decoration: none;
+        border-radius: 0.3rem;
+        transition: all 0.25s ease;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:hover {
+            background: $color3;
+            color: $color2;
+            .icon-upwork {
+                background: $color2;
+                svg {
+                    path {
+                        fill: $color3;
+                    }
+                }
+            }
+        }
+    }
+    .icon-upwork {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 0.4rem;
+        width: 2.2rem;
+        height: 2.2rem;
+        background: $color3;
+        border-radius: 0.3rem;
+        transition: background 0.25s ease;
+        svg {
+            display: inline-block;
+            width: 1.8rem;
+            height: 1.8rem;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 0);
+            path {
+                fill: $color2;
+                transition: fill 0.25s ease;
+            }
+        }
+    }
+}
+
+$buttonColor: darken($color1, 25%);
+.mobile-menu-btn {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 1rem;
+    top: 1rem;
+    width: 40px;
+    height: 36px;
+    padding: 5px;
+    box-sizing: content-box;
+    cursor: pointer;
+    transform: translate(0, 0);
+    transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    .burger {
+        position: absolute;
+        height: 5px;
+        top: 50%;
+        left: 5px;
+        width: 40px;
+        margin-top: -2px;
+        opacity: 1;
+        background: $buttonColor;
+        &:before {
+            position: absolute;
+            background: $buttonColor;
+            width: 40px;
+            height: 5px;
+            left: 0;
+            top: 15px;
+            content: "";
+            display: block;
+        }
+        &:after {
+            position: absolute;
+            background: $buttonColor;
+            width: 40px;
+            height: 5px;
+            bottom: 15px;
+            left: 0;
+            content: "";
+            display: block;
+        }
+        &:before,
+        &:after {
+            transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+        }
+        transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+    }
+
+    &.active {
+        transform: translate(25rem, 0);
+        .burger {
+            background: rgba(111,111,111,.0);
+            &:before{
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                top: 0px;
+            }
+            &:after{
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                bottom: 0px;
+            }
+        }
+    }
+
+    @media (max-width: 960px) {
+        display: block;
+    }
+}
+@media (max-width: 960px) {
+    .page-header {
+        width: auto;
+        background: none;
+        .container {
+            flex-wrap: wrap;
+            position: fixed;
+            top: 0;
+            right: 100%;
+            height: 100%;
+            width: 25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba($color2, 0.95);
+            transform: translate(0, 0);
+            transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+            &.active {
+                transform: translate(100%, 0);
+            }
+        }
+
+    }
+    .main-menu {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        a {
+            margin: 1rem 0;
+            text-align: center;
+        }
+    }
+    .header-links {
+        margin: 4rem 0 0;
+        a {
+            margin: 0 0.2rem;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
