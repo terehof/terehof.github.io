@@ -19,11 +19,11 @@ var reload = browserSync.reload;
 
 var path = {
     build: {
-        pug: 'docs/',
-        js: 'docs/js/',
-        css: 'docs/css/',
-        img: 'docs/img/',
-        fonts: 'docs/fonts/'
+        pug: '/',
+        js: 'js/',
+        css: 'css/',
+        img: 'img/',
+        fonts: 'fonts/'
     },
     src: {
         js: 'src/js/*.js',
@@ -113,7 +113,7 @@ gulp.task('fonts', function () {
 gulp.task('dev-watch', ['dev'], function () {
     browserSync.init({
         server: {
-            baseDir: "./docs",
+            baseDir: "./",
             middleware: [historyApiFallback({})]
         },
         port: 3000
@@ -137,7 +137,7 @@ gulp.task('dev-watch', ['dev'], function () {
 gulp.task('prod-watch', ['prod'], function () {
     browserSync.init({
         server: {
-            baseDir: "./docs",
+            baseDir: "./",
             middleware: [historyApiFallback({})]
         },
         port: 3003
